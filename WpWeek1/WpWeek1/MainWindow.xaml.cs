@@ -23,6 +23,31 @@ namespace WpWeek1
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button but = e.Source as Button; 
+            if (Shyfr.Text.Length <6)
+            {
+
+                Shyfr.Text += but.Content.ToString();
+            }         
+            else
+            {
+                MessageBox.Show("Code completion is complete!");
+            }
+        }
+
+        private void Button_Click_C(object sender, RoutedEventArgs e)
+        {
+            Shyfr.Text = "";
+        }
+
+        private void Button_Click_ok(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Safe opened!");
         }
     }
 }
