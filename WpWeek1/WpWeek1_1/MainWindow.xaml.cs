@@ -24,5 +24,22 @@ namespace WpWeek1_1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Result.Content = (Convert.ToDouble(a1.Text) * Convert.ToDouble(b2.Text) * Convert.ToDouble(c3.Text)+
+                Convert.ToDouble(a3.Text) * Convert.ToDouble(b1.Text) * Convert.ToDouble(c2.Text)+
+                Convert.ToDouble(a2.Text) * Convert.ToDouble(b3.Text) * Convert.ToDouble(c1.Text)-
+                Convert.ToDouble(a3.Text) * Convert.ToDouble(b2.Text) * Convert.ToDouble(c1.Text)-
+                Convert.ToDouble(a1.Text) * Convert.ToDouble(b3.Text) * Convert.ToDouble(c2.Text)-
+                Convert.ToDouble(a2.Text) * Convert.ToDouble(b1.Text) * Convert.ToDouble(c3.Text)).ToString();
+            }
+            catch
+            {
+                Result.Content = "Некоректные значения";
+            }
+        }
     }
 }

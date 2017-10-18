@@ -6,7 +6,39 @@
         xmlns:local="clr-namespace:WpWeek1_1"
         mc:Ignorable="d"
         Title="Определитель" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Width="auto">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0" >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions >
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBox Text=""  Name="a1" Margin =" 5" ToolTip="Enter value" Grid.Column="0" Grid.Row="0" FontSize="36" TextAlignment="Center"></TextBox>
+            <TextBox Text="" Name="a2" Margin =" 5" ToolTip="Enter value" Grid.Column="0" Grid.Row="1" FontSize="36" TextAlignment="Center"></TextBox>
+            <TextBox Text="" Name="a3" Margin =" 5" ToolTip="Enter value" Grid.Column="0" Grid.Row="2" FontSize="36" TextAlignment="Center"></TextBox>
+            <TextBox Text="" Name="b1"  Margin =" 5" ToolTip="Enter value" Grid.Column="1" Grid.Row="0" FontSize="36" TextAlignment="Center"></TextBox>
+            <TextBox Text="" Name="b2" Margin =" 5" ToolTip="Enter value" Grid.Column="1" Grid.Row="1" FontSize="36" TextAlignment="Center"></TextBox>
+            <TextBox Text="" Name="b3" Margin =" 5" ToolTip="Enter value" Grid.Column="1" Grid.Row="2" FontSize="36" TextAlignment="Center"></TextBox>
+            <TextBox Text="" Name="c1" Margin =" 5" ToolTip="Enter value" Grid.Column="2" Grid.Row="0" FontSize="36" TextAlignment="Center"></TextBox>
+            <TextBox Text="" Name="c2" Margin =" 5" ToolTip="Enter value" Grid.Column="2" Grid.Row="1" FontSize="36" TextAlignment="Center"></TextBox>
+            <TextBox Text="" Name="c3" Margin =" 5" ToolTip="Enter value" Grid.Column="2" Grid.Row="2" FontSize="36" TextAlignment="Center"></TextBox>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="0" >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button FontSize="32" Width="30" Height="50" Margin="10" Click="Button_Click">=</Button>
+            <Label Grid.Column="1" Name="Result" Margin="5" Width="auto" Height="50" FontSize="36" ></Label>
+        </Grid>
     </Grid>
 </Window>
