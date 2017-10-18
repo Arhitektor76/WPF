@@ -6,62 +6,34 @@
         xmlns:local="clr-namespace:WpWeek1_3"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <StackPanel.Resources>
-                <!-- Шаблон для кнопок -->
-                <ControlTemplate x:Key="Button_Template" TargetType="{x:Type Button}">
-                    <Border BorderBrush="#333" BorderThickness="1" 
-                                TextBlock.Foreground="#ddd" Margin="0 0 10 0" MaxHeight="30"
-                                MinWidth="80" Padding="5" Name="myBorder">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                <GradientStop Color="#676767" Offset="0"></GradientStop>
-                                <GradientStop Color="#474747" Offset="1"></GradientStop>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}"
-                              VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="myBorder" Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                        <GradientStop Color="#777777" Offset="0"></GradientStop>
-                                        <GradientStop Color="#575757" Offset="1"></GradientStop>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter TargetName="myBorder" Property="Cursor" Value="Hand"></Setter>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="myBorder" Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                        <GradientStop Color="#939292" Offset="0"></GradientStop>
-                                        <GradientStop Color="#575757" Offset="1"></GradientStop>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter TargetName="myBorder" Property="Cursor" Value="Hand"></Setter>
-                        </Trigger>
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter TargetName="myBorder" Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                        <GradientStop Color="#444" Offset="0"></GradientStop>
-                                        <GradientStop Color="#222" Offset="1"></GradientStop>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter TargetName="myBorder" Property="Opacity" Value="0.4"></Setter>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </StackPanel.Resources>
-            <Button Template="{Binding Source={StaticResource ResourceKey=Button_Template}}">НАЗАД</Button>
-            <Button Template="{Binding Source={StaticResource ResourceKey=Button_Template}}">ДАЛЕЕ</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Margin="2" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <Button Margin="3" >Создать</Button>
+            <Button Margin="3" >Изменить</Button>
+            <Button Margin="3" >Удалить</Button>
+            <Button Margin="3" >Сохранить</Button>
+            <Button Margin="3" >Сохранить как</Button>
+            <Button Margin="3" >Открыть</Button>
+            <Button Margin="3" >Выход</Button>
+            <Button Margin="3" >Завершение сеанса</Button>
+        </WrapPanel>
+        <StackPanel x:Name="act" Grid.Column="0" Grid.Row="1" Margin="2">
+            <Button Margin="3" >Почта</Button>
+            <Button Margin="3" Content="Календарь" />
+            <Button Margin="3" Content="Задачи" Click="Button_Click" />
+            <Button Margin="3" Content="Журнал" Click="Button_Click_1" />
+            <Button Margin="3" Content="Почта опять" />
         </StackPanel>
+        <TextBox Name="TB" Text="задача" Visibility="Visible" Grid.Column="1" Grid.Row="1" Margin="2"/>
+        <Label Name="L" Content="журнал" Visibility="Hidden" Grid.Column="1" Grid.Row="1" Margin="2"/>
     </Grid>
 </Window>

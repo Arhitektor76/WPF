@@ -24,5 +24,17 @@ namespace WpWeek1_3
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            L.Visibility = Visibility.Hidden;
+            TB.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            L.Visibility = Visibility.Visible;
+            TB.Visibility = Visibility.Hidden;
+        }
     }
 }
