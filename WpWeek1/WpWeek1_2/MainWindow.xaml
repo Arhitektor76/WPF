@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpWeek1_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpWeek1_2"
+        mc:Ignorable="d"
+        Title="Задание 3" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions >
+        <WrapPanel>
+            <Button Margin="3" Padding="3" Content="Линия" ></Button>
+            <Button Margin="3" Content="Прямоугольник" />
+            <Button Margin="3" Content="Квадрат" />
+            <Button Margin="3" Content="Окружность" />
+            <Button Margin="3" Content="Элипс" />
+            <Button Margin="3" Content="Кривая линия" />
+            <Button Margin="3" Content="Сплайн" />
+            <Button Margin="3" Content="Плоскость" />
+            <Button Margin="3" Content="Параллелипипед" />
+            <Button Margin="3" Content="Куб" />
+            <Button Margin="3" Content="Пирамида" />
+            <Button Margin="3" Content="Конус" />
+            <Button Margin="3" Content="Цилиндр" />
+            <Button Margin="3" Content="Шар" />
+            <Button Margin="3" Content="Поверхность" />
+        </WrapPanel>
+    </Grid>
+</Window>
