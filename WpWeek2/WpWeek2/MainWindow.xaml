@@ -13,13 +13,15 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0">
-            
+            <TextBox></TextBox>
         </WrapPanel>
         <DockPanel Grid.Row="1">
             
         </DockPanel>
-        <StackPanel Grid.Row="2">
-            
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Width="100" Height="30" Margin="5">OK</Button>
+            <Button Width="100" Height="30" Margin="5">CANCEL</Button>
+            <Button Width="100" Height="30" Margin="5">IGNORE</Button>
         </StackPanel>
     </Grid>
 </Window>
