@@ -24,5 +24,10 @@ namespace WpWeek2
         {
             InitializeComponent();
         }
+
+        private void ListBox_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,23 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpWeek2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Анкета студента" Height="600" Width="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <WrapPanel Grid.Row="0">
-            <TextBox></TextBox>
-        </WrapPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Ввод данных" Grid.Row="0" Padding="3"  HorizontalAlignment="Left" Margin="2"> 
+            <WrapPanel Orientation="Vertical">
+                <GroupBox Header="Фамилия" Width="200">
+                    <TextBox></TextBox>
+                </GroupBox>
+                <GroupBox Header="Имя" Width="200">
+                    <TextBox></TextBox>
+                </GroupBox>
+                <GroupBox Header="Отчество" Width="200">
+                    <TextBox></TextBox>
+                </GroupBox>
+                <GroupBox Header="Семейное положение" Width="150" HorizontalAlignment="Left">
+                    <TextBox></TextBox>
+                </GroupBox>
+                <GroupBox Header="Возраст" Width="80" HorizontalAlignment="Left">
+                    <TextBox></TextBox>
+                </GroupBox>
+                <GroupBox Header="Адрес" Width="200" Height="auto">
+                    <TextBox TextWrapping="Wrap"></TextBox>
+                </GroupBox>
+                <GroupBox Header="Email" Width="200">
+                    <TextBox></TextBox>
+                </GroupBox>
+            </WrapPanel>
+        </GroupBox>
+        
         <DockPanel Grid.Row="1">
-            
+            <CheckBox DockPanel.Dock="Top" Margin="15 5 0 0">Высшее образование</CheckBox>
+            <CheckBox DockPanel.Dock="Top" Margin="15 5 0 0">Навыки работы с компьтером</CheckBox>
+            <CheckBox DockPanel.Dock="Top" Margin="15 5 0 0">Знание иностранных языков</CheckBox>
+            <CheckBox DockPanel.Dock="Top" Margin="15 5 0 0">Знание информ. технологий</CheckBox>
         </DockPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <Button Width="100" Height="30" Margin="5">OK</Button>
-            <Button Width="100" Height="30" Margin="5">CANCEL</Button>
-            <Button Width="100" Height="30" Margin="5">IGNORE</Button>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Width="80" Height="30" Margin="5">OK</Button>
+            <Button Width="80" Height="30" Margin="5">CANCEL</Button>
+            <Button Width="80" Height="30" Margin="5">IGNORE</Button>
         </StackPanel>
+        <ScrollViewer Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="0 0 3 0">
+            <GroupBox Header="Список студентов"  Padding="3" Margin="2">
+                <ListBox  Margin="3"></ListBox>
+            </GroupBox>
+        </ScrollViewer>
+            
     </Grid>
 </Window>
