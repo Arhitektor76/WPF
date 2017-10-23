@@ -50,12 +50,12 @@
         </DockPanel>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Width="80" Height="30" Margin="5" Click="Button_Click_OK">OK</Button>
-            <Button Width="80" Height="30" Margin="5">CANCEL</Button>
-            <Button Width="80" Height="30" Margin="5">IGNORE</Button>
+            <Button Width="80" Height="30" Margin="5" Click="Button_Click_CANCEL">CANCEL</Button>
+            <Button Width="80" Height="30" Margin="5" Click="Button_Click_IGNORE">IGNORE</Button>
         </StackPanel>
         <ScrollViewer Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="0 0 3 0">
             <GroupBox Header="Список студентов"  Padding="3" Margin="2">
-                <ListBox Name="ListStud" Margin="3"></ListBox>
+                <ListBox Name="ListStud" Margin="3" SelectionChanged="ListStud_SelectionChanged"></ListBox>
             </GroupBox>
         </ScrollViewer>
             

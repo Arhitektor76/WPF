@@ -22,7 +22,7 @@ namespace WpWeek2
         public bool Language_skills { get; set; }
         public bool Inform_technologies { get; set; }
 
-        public void Write(BinaryWriter bw) 
+        public void Write(BinaryWriter bw)
         {
             bw.Write(FirstName);
             bw.Write(LastName);
