@@ -16,12 +16,12 @@
         </Grid.RowDefinitions>
         <Menu Height="25" VerticalAlignment="Top" Margin="5">
             <MenuItem Header="Задание">
-                <MenuItem Header="Добавить задание"></MenuItem>
-                <MenuItem Header="Удалить задание"></MenuItem>
-                <MenuItem Header="Изменить задание"></MenuItem>
-                <MenuItem Header="Очистить список отчетов"></MenuItem>
+                <MenuItem Header="Добавить задание" Click="MenuItem_Click_add"></MenuItem>
+                <MenuItem Header="Удалить задание" Click="MenuItem_Click_delete"></MenuItem>
+                <MenuItem Header="Изменить задание" Click="MenuItem_Click_update"></MenuItem>
+                <MenuItem Header="Очистить список отчетов" Click="MenuItem_Click_clear"></MenuItem>
                 <Separator/>
-                <MenuItem Header="Выход"></MenuItem>
+                <MenuItem Header="Выход" Click="MenuItem_Click_exit"></MenuItem>
             </MenuItem>
         </Menu>
         <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" >Список заданий</TextBlock>
