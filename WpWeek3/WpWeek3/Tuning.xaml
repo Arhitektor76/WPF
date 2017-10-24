@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpWeek3"
         mc:Ignorable="d"
-        Title="Tuning" Height="400" Width="500">
+        Title="Tuning" Height="350" Width="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <StackPanel >
             <TextBlock Text="Выполнить:" Margin="10 5 10 5" ></TextBlock>
@@ -24,10 +24,58 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="2" MaxHeight="50">
-                <DatePicker></DatePicker>
-            </TextBlock>
-            
+            <StackPanel Grid.Row="0">
+                <TextBlock Margin="10 5 10 5">Назначить задание:</TextBlock>
+                <ComboBox Margin="10 5 10 10" Height="25" IsEditable ="True">
+                    <ComboBoxItem IsSelected="True">
+                        <TextBlock>Ежедневно</TextBlock>
+                    </ComboBoxItem>
+                    <TextBlock>Еженедельно</TextBlock>
+                    <TextBlock>Ежемесячно</TextBlock>
+                    <TextBlock>Однократно</TextBlock>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <TextBlock Margin="10 5 10 5">Время начала:</TextBlock>
+                <ComboBox Margin="10 5 10 10" Height="25" IsEditable ="True">
+                    <ComboBoxItem IsSelected="True">
+                        <TextBlock>Ежедневно</TextBlock>
+                    </ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="2">
+                <TextBlock Margin="10 5 10 5">Дата начала:</TextBlock>
+                <DatePicker Margin="10 5 10 5"  Height="25" SelectedDateFormat="Long"/>
+            </StackPanel>
         </Grid>
+        <GroupBox Header="Выбор по дням недели" Grid.Row="2" Margin="10 5 10 5">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0" VerticalAlignment="Center">Пн</CheckBox>
+                <CheckBox Grid.Column="1" VerticalAlignment="Center">Вт</CheckBox>
+                <CheckBox Grid.Column="2" VerticalAlignment="Center">Ср</CheckBox>
+                <CheckBox Grid.Column="3" VerticalAlignment="Center">Чт</CheckBox>
+                <CheckBox Grid.Column="4" VerticalAlignment="Center">Пт</CheckBox>
+                <CheckBox Grid.Column="5" VerticalAlignment="Center">Сб</CheckBox>
+                <CheckBox Grid.Column="6" VerticalAlignment="Center">Вс</CheckBox>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Row ="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button  Grid.Column ="0" Width="80" Height="20">Ok</Button>
+            <Button Grid.Column ="1" Width="80" Height="20">Отмена</Button>
+        </Grid>
+       
     </Grid>
 </Window>
