@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace WpWeek3
 {
     /// <summary>
@@ -22,6 +23,18 @@ namespace WpWeek3
         public Tuning()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click_Open(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+
+            Nullable<bool> result = dlg.ShowDialog();
+
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+            }
         }
     }
 }

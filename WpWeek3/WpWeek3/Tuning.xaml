@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpWeek3"
+        xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
         mc:Ignorable="d"
         Title="Tuning" Height="350" Width="500">
     <Grid>
@@ -16,7 +17,7 @@
         <StackPanel >
             <TextBlock Text="Выполнить:" Margin="10 5 10 5" ></TextBlock>
             <TextBox  Margin="10 5 10 5" Height="20" ></TextBox>
-            <Button  Margin="0 10 10 0" HorizontalAlignment="Right" Width="60">Обзор...</Button>
+            <Button  Margin="0 10 10 0" HorizontalAlignment="Right" Width="60" Click="Button_Click_Open">Обзор...</Button>
         </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -39,7 +40,7 @@
                 <TextBlock Margin="10 5 10 5">Время начала:</TextBlock>
                 <ComboBox Margin="10 5 10 10" Height="25" IsEditable ="True">
                     <ComboBoxItem IsSelected="True">
-                        <TextBlock>Ежедневно</TextBlock>
+                       
                     </ComboBoxItem>
                 </ComboBox>
             </StackPanel>
@@ -73,8 +74,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button  Grid.Column ="0" Width="80" Height="20">Ok</Button>
-            <Button Grid.Column ="1" Width="80" Height="20">Отмена</Button>
+            <Button  Grid.Column ="0" Width="80" Height="20" HorizontalAlignment="Right" Margin="0 0 20 0">Ok</Button>
+            <Button Grid.Column ="1" Width="80" Height="20" HorizontalAlignment="Left" Margin="20 0 0 0">Отмена</Button>
         </Grid>
        
     </Grid>
