@@ -36,5 +36,17 @@ namespace WpWeek3
                 string filename = dlg.FileName;
             }
         }
+
+        private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime selectedDate = (DateTime)Calendar.SelectedDate;
+            Cal_date.Text = selectedDate.ToString("d MMM yyyy");
+        }
+
+        private void Button_Click_Date(object sender, RoutedEventArgs e)
+        {
+            DateText.Text = "Сегодня: "+ System.DateTime.Now.ToShortDateString();
+            Cal_date.Text = System.DateTime.Now.ToShortDateString();
+        }
     }
 }
