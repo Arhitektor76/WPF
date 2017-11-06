@@ -5,13 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Microsoft.Windows.Controls;
 
 
 namespace WpWeek3
@@ -49,5 +42,6 @@ namespace WpWeek3
             DateText.Text = "Сегодня: "+ System.DateTime.Now.ToShortDateString();
             Cal_date.Text = System.DateTime.Now.ToShortDateString();
         }
+
     }
 }
