@@ -38,10 +38,8 @@
             <StackPanel Grid.Row="1" Grid.Column="1">
                 <TextBlock Margin="10 5 10 5">Время начала:</TextBlock>
                 <ComboBox Margin="10 5 10 10" Height="25" IsEditable ="True">
-                    <ComboBoxItem IsSelected="False" Height="15">
-                        <StackPanel Orientation="Vertical" MinHeight="30">
-                            
-                        </StackPanel>
+                    <ComboBoxItem IsSelected="False" Height="50">
+                        <local:TimeControl Width="auto"/>
                     </ComboBoxItem>
                 </ComboBox>
             </StackPanel>
