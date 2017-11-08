@@ -33,8 +33,7 @@ namespace WpWeek3
 
         private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            DateTime selectedDate = (DateTime)Calendar.SelectedDate;
-            Cal_date.Text = selectedDate.ToString("d MMM yyyy");
+            Cal_date.Text = ((DateTime)Calendar.SelectedDate).ToString("d MMM yyyy");
         }
 
         private void Button_Click_Date(object sender, RoutedEventArgs e)
@@ -43,5 +42,14 @@ namespace WpWeek3
             Cal_date.Text = System.DateTime.Now.ToShortDateString();
         }
 
+        private void DropDownClosedTime(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DropDownClosedCalendar(object sender, EventArgs e)
+        {
+            Cal_date.Text = ((DateTime)Calendar.SelectedDate).ToString("d MMM yyyy");
+        }
     }
 }

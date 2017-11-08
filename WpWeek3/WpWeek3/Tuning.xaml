@@ -37,15 +37,15 @@
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="1">
                 <TextBlock Margin="10 5 10 5">Время начала:</TextBlock>
-                <ComboBox Margin="10 5 10 10" Height="25" IsEditable ="True">
-                    <ComboBoxItem IsSelected="False" Height="50">
-                        <local:TimeControl Width="auto"/>
+                <ComboBox Margin="10 5 10 10" Height="25" IsEditable ="True" DropDownClosed="DropDownClosedTime">
+                    <ComboBoxItem IsSelected="False" Height="50" Padding="2">
+                        <local:TimeControl Width="130"/>
                     </ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="2">
                 <TextBlock Margin="10 5 10 5">Дата начала:</TextBlock>
-                <ComboBox Name="Cal_date" Margin="10 5 10 10" Height="25" IsEditable ="True" IsReadOnly="True">
+                <ComboBox Name="Cal_date" Margin="10 5 10 10" Height="25" IsEditable ="True" IsReadOnly="True" DropDownClosed="DropDownClosedCalendar">
                     <ComboBoxItem>
                         <Grid>
                             <Grid.RowDefinitions>
