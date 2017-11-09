@@ -27,7 +27,7 @@ namespace WpWeek3
 
             if (result == true)
             {
-                string filename = dlg.FileName;
+                Fulfill.Text  = dlg.FileName;
             }
         }
 
@@ -44,12 +44,18 @@ namespace WpWeek3
 
         private void DropDownClosedTime(object sender, EventArgs e)
         {
-
+            ComboTime.Text = ((DateTime)Time.DateTimeValue).ToString("T");
         }
 
         private void DropDownClosedCalendar(object sender, EventArgs e)
         {
-            Cal_date.Text = ((DateTime)Calendar.SelectedDate).ToString("d MMM yyyy");
+            Cal_date.Text = ((DateTime)Calendar.SelectedDate).ToString("dd MMMM yyyy");
+        }
+
+        private void Period_DropDownClosed(object sender, EventArgs e)
+        {
+
+            CheckBoxWeek.IsEnabled = Period.Text == "Еженедельно"? true: false;
         }
     }
 }

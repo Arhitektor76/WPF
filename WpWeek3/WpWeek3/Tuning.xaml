@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <StackPanel >
             <TextBlock Text="Выполнить:" Margin="10 5 10 5" ></TextBlock>
-            <TextBox  Margin="10 5 10 5" Height="20" ></TextBox>
+            <TextBox Name="Fulfill" Margin="10 5 10 5" Height="20" ></TextBox>
             <Button  Margin="0 10 10 0" HorizontalAlignment="Right" Width="60" Click="Button_Click_Open">Обзор...</Button>
         </StackPanel>
         <Grid Grid.Row="1">
@@ -26,10 +26,9 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Row="0">
                 <TextBlock Margin="10 5 10 5">Назначить задание:</TextBlock>
-                <ComboBox Margin="10 5 10 10" Height="25" IsEditable ="True">
-                    <ComboBoxItem IsSelected="True">
-                        <TextBlock>Ежедневно</TextBlock>
-                    </ComboBoxItem>
+                <ComboBox Name="Period" Margin="10 5 10 10" Height="25" IsEditable ="True" DropDownClosed="Period_DropDownClosed">
+                    <TextBlock> </TextBlock>
+                    <TextBlock>Ежедневно</TextBlock>
                     <TextBlock>Еженедельно</TextBlock>
                     <TextBlock>Ежемесячно</TextBlock>
                     <TextBlock>Однократно</TextBlock>
@@ -37,9 +36,9 @@
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="1">
                 <TextBlock Margin="10 5 10 5">Время начала:</TextBlock>
-                <ComboBox Margin="10 5 10 10" Height="25" IsEditable ="True" DropDownClosed="DropDownClosedTime">
+                <ComboBox Name="ComboTime" Margin="10 5 10 10" Height="25" IsEditable ="True" DropDownClosed="DropDownClosedTime">
                     <ComboBoxItem IsSelected="False" Height="50" Padding="2">
-                        <local:TimeControl Width="130"/>
+                        <local:TimeControl x:Name="Time" Width="130"/>
                     </ComboBoxItem>
                 </ComboBox>
             </StackPanel>
@@ -66,7 +65,7 @@
             </StackPanel>
         </Grid>
         <GroupBox Header="Выбор по дням недели" Grid.Row="2" Margin="10 5 10 5">
-            <Grid >
+            <Grid Name="CheckBoxWeek" IsEnabled="False">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
