@@ -89,8 +89,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button  Grid.Column ="0" Width="80" Height="20" HorizontalAlignment="Right" Margin="0 0 20 0">Ok</Button>
-            <Button Grid.Column ="1" Width="80" Height="20" HorizontalAlignment="Left" Margin="20 0 0 0">Отмена</Button>
+            <Button  Grid.Column ="0" Width="80" Height="20" HorizontalAlignment="Right" Margin="0 0 20 0" Click="Button_Click_1">Ok</Button>
+            <Button Grid.Column ="1" Width="80" Height="20" HorizontalAlignment="Left" Margin="20 0 0 0" Click="Button_Click">Отмена</Button>
         </Grid>
 
     </Grid>

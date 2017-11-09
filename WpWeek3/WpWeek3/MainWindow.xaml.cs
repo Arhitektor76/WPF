@@ -38,12 +38,12 @@ namespace WpWeek3
 
         private void MenuItem_Click_clear(object sender, RoutedEventArgs e)
         {
-
+            Report.Items.Clear();
         }
 
         private void MenuItem_Click_exit(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -40,6 +40,7 @@ namespace WpWeek3
         {
             DateText.Text = "Сегодня: "+ System.DateTime.Now.ToShortDateString();
             Cal_date.Text = System.DateTime.Now.ToShortDateString();
+            Calendar.SelectedDate = DateTime.Now;
         }
 
         private void DropDownClosedTime(object sender, EventArgs e)
@@ -56,6 +57,23 @@ namespace WpWeek3
         {
 
             CheckBoxWeek.IsEnabled = Period.Text == "Еженедельно"? true: false;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(Fulfill.Text !="")
+            {
+                MessageBox.Show("Задание добавлено");
+            }
+            else
+            {
+                MessageBox.Show("Задание не добавлено. Требуется заполнить все поля");
+            }
         }
     }
 }
