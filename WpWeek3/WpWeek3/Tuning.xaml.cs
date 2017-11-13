@@ -64,7 +64,7 @@ namespace WpWeek3
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_Ok(object sender, RoutedEventArgs e)
         {
             if(Fulfill.Text !="")
             {
@@ -74,6 +74,8 @@ namespace WpWeek3
             {
                 MessageBox.Show("Задание не добавлено. Требуется заполнить все поля");
             }
+            
+            this.Close();
         }
     }
 }
