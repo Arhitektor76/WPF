@@ -15,7 +15,7 @@ namespace WpWeek3
     public partial class MainWindow : Window
     {
         private System.Windows.Forms.NotifyIcon TrayIcon = null;
-        private ContextMenu TrayMenu = null;
+        private System.Windows.Controls.ContextMenu TrayMenu = null;
         private WindowState fCurrentWindowState = WindowState.Normal;
         public MainWindow()
         {
@@ -42,7 +42,7 @@ namespace WpWeek3
                                                                              // обратите внимание, за ресурсом с картинкой мы лезем в свойства проекта, а не окна,
                                                                              // поэтому нужно указать полный namespace
                 TrayIcon.Text = "Here is tray icon text."; // текст подсказки, всплывающей над иконкой
-                TrayMenu = Resources["TrayMenu"] as ContextMenu; // а здесь уже ресурсы окна и тот самый x:Key
+                TrayMenu = Resources["TrayMenu"] as System.Windows.Controls.ContextMenu; // а здесь уже ресурсы окна и тот самый x:Key
 
                 // сразу же опишем поведение при щелчке мыши, о котором мы говорили ранее
                 // это будет просто анонимная функция, незачем выносить ее в класс окна
@@ -76,14 +76,14 @@ namespace WpWeek3
              // прячем его
                 Hide();
                 // меняем надпись на пункте меню
-                (TrayMenu.Items[0] as MenuItem).Header = "Show";
+                (TrayMenu.Items[0] as System.Windows.Controls.MenuItem).Header = "Show";
             }
             else
             { // а если не видно
               // показываем
                 Show();
                 // меняем надпись на пункте меню
-                (TrayMenu.Items[0] as MenuItem).Header = "Hide";
+                (TrayMenu.Items[0] as System.Windows.Controls.MenuItem).Header = "Hide";
                 WindowState = CurrentWindowState;
                 Activate(); // обязательно нужно отдать фокус окну,
                             // иначе пользователь сильно удивится, когда увидит окно
@@ -99,7 +99,7 @@ namespace WpWeek3
                 // если окно минимизировали, просто спрячем
                 Hide();
                 // и поменяем надпись на менюшке
-                (TrayMenu.Items[0] as MenuItem).Header = "Show";
+                (TrayMenu.Items[0] as System.Windows.Controls.MenuItem).Header = "Show";
             }
             else
             {
@@ -123,7 +123,7 @@ namespace WpWeek3
               // запоминаем текущее состояние окна
     CurrentWindowState = this.WindowState;
                 // меняем надпись в менюшке
-                (TrayMenu.Items[0] as MenuItem).Header = "Show";
+                (TrayMenu.Items[0] as System.Windows.Controls.MenuItem).Header = "Show";
                 // прячем окно
                 Hide();
             }
